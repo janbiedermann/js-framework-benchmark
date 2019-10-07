@@ -1,4 +1,4 @@
-class Row < React::PureComponent::Base
+class Row < React::Component::Base
   event_handler :on_select do
     props.select.call(props.item)
   end

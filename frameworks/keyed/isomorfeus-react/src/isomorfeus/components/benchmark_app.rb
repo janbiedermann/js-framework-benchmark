@@ -1,4 +1,4 @@
-class BenchmarkApp < React::PureComponent::Base
+class BenchmarkApp < React::Component::Base
 
   A = %w[pretty large big small tall short long handsome plain quaint clean elegant easy angry crazy
          helpful mushy odd unsightly adorable important inexpensive cheap expensive fancy]
