@@ -35,7 +35,7 @@ class BenchmarkApp < LucidApp::Base
   end
 
   def run_lots
-    @data = build_data(1000)
+    @data = build_data(10000)
     app_store.selected = 0
     force_update
   end
@@ -80,12 +80,13 @@ class BenchmarkApp < LucidApp::Base
       Jumbotron(run: method(:run), run_lots: method(:run_lots), add: method(:add), update: method(:update),
                 clear: method(:clear), swap_rows: method(:swap_rows))
       @remove_method ||= method(:remove)
+      @icon ||= gre { SPAN(class_name: "glyphicon glyphicon-remove", aria_hidden: "true") }
       s = app_store.selected
       TABLE(class_name: "table table-hover table-striped test-data") do
         TBODY do
           @data.each do |item|
             id = item[:id]
-            Row(key: id, item: item, selected: (s == id), remove: @remove_method)
+            Row(key: id, item: item, selected: (s == id), remove: @remove_method, icon: @icon)
           end
         end
       end
