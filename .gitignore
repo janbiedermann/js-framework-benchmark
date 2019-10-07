@@ -59,7 +59,7 @@ marko-*/src/xtable.marko
 # keep root yarn.lock in repo so that travis will install yarn
 yarn.lock
 !/yarn.lock
-
+Gemfile.lock
 package-lock.json
 
 # angular 2 aot
