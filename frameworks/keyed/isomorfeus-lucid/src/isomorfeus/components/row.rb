@@ -1,4 +1,6 @@
 class Row < LucidComponent::Base
+  store_updates_off
+
   event_handler :on_select do
     app_store.selected = props.item[:id]
   end
