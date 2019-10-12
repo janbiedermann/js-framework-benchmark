@@ -1,7 +1,7 @@
 {
   "name": "js-framework-benchmark-isomorfeus-lucid-preact",
   "version": "1.0.0",
-  "description": "Isomorfeus Lucid Preact demo",
+  "description": "Isomorfeus Lucid Preact",
   "main": "index.js",
   "js-framework-benchmark": {
     "frameworkVersion": "10.0.0"

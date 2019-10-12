@@ -1,10 +1,10 @@
 {
   "name": "js-framework-benchmark-isomorfeus-react",
   "version": "1.0.0",
-  "description": "Isomorfeus React demo",
+  "description": "Isomorfeus React",
   "main": "index.js",
   "js-framework-benchmark": {
-    "frameworkVersion": "16.10.4"
+    "frameworkVersion": "16.10.2"
   },
   "scripts": {
     "build-dev": "echo 'done'",
