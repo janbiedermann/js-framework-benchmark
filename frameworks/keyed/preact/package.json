@@ -1,7 +1,7 @@
 {
-  "name": "js-framework-benchmark-react-lite",
+  "name": "js-framework-benchmark-preact",
   "version": "1.0.0",
-  "description": "Benchmark for react-lite framework",
+  "description": "Benchmark for preact framework",
   "js-framework-benchmark": {
     "frameworkVersionFromPackage": "preact"
   },
@@ -31,6 +31,6 @@
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
     "jsx-loader": "0.13.2",
-    "preact": "8.4.2"
+    "preact": "^10.0.0"
   }
 }

@@ -42,10 +42,7 @@ module.exports = [{
             __dirname,
             path.resolve(__dirname, "src"),
             "node_modules"
-        ],
-        alias: {
-            'preact': 'node_modules/preact/dist/preact.min.js',
-        }
+        ]
     },
     plugins: [
         new webpack.DefinePlugin({
