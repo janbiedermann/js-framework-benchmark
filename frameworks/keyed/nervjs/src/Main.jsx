@@ -4,70 +4,59 @@ const React = require("nervjs");
 const { render, createElement, Component } = React;
 const { Store } = require("./Store");
 
-function shouldRowUpdate(prevProps, nextProps) {
-  return (
-    prevProps.data !== nextProps.data ||
-    nextProps.styleClass !== prevProps.styleClass
-  );
-}
+const GlyphIcon = <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>;
 
-function selectOnClick(onSelect, id) {
-  return () => {
-    onSelect(id);
-  };
-}
-
-function deleteOnClick(onDetele, id) {
-  return () => onDetele(id);
-}
-
-function createRows(store, onSelect, onDelete) {
-  const rows = [];
-  const data = store.data;
-  const selected = store.selected;
-
-  for (let i = 0; i < data.length; i++) {
-    const d = data[i];
-    const id = d.id;
-
-    rows.push(
-      <Row
-        key={id}
-        data={d}
-        id={id}
-        styleClass={id === selected ? "danger" : null}
-        onDelete={onDelete}
-        onSelect={onSelect}
-        onShouldComponentUpdate={shouldRowUpdate}
-      />
-    );
+class Row extends Component {
+  constructor(props) {
+    super(props);
+    this.onSelect = this.onSelect.bind(this);
+    this.onRemove = this.onRemove.bind(this);
   }
-  return <tbody>{rows}</tbody>;
-}
-const span = <span className="glyphicon glyphicon-remove" aria-hidden="true" />;
-const td = <td className="col-md-6" />;
 
-function Row({ data, id, onSelect, onDelete, styleClass }) {
-  return (
-    <tr className={styleClass}>
-      <td className="col-md-1">{id + ""}</td>
-      <td className="col-md-4">
-        <a onClick={selectOnClick(onSelect, id)}>{data.label}</a>
-      </td>
-      <td className="col-md-1">
-        <a onClick={deleteOnClick(onDelete, id)}>{span}</a>
-      </td>
-      {td}
-    </tr>
-  );
+  onSelect() {
+    this.props.select(this.props.item.id);
+  }
+
+  onRemove() {
+    this.props.remove(this.props.item.id);
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return nextProps.item !== this.props.item || nextProps.selected !== this.props.selected;
+  }
+
+  render() {
+    let { selected, item } = this.props;
+    return (<tr className={selected ? "danger" : ""}>
+      <td className="col-md-1">{item.id}</td>
+      <td className="col-md-4"><a onClick={this.onSelect}>{item.label}</a></td>
+      <td className="col-md-1"><a onClick={this.onRemove}>{GlyphIcon}</a></td>
+      <td className="col-md-6"></td>
+    </tr>);
+  }
 }
+
+// function Row({ data, id, onSelect, onDelete, styleClass }) {
+//   return (
+//     <tr className={styleClass}>
+//       <td className="col-md-1">{id + ""}</td>
+//       <td className="col-md-4">
+//         <a onClick={selectOnClick(onSelect, id)}>{data.label}</a>
+//       </td>
+//       <td className="col-md-1">
+//         <a onClick={deleteOnClick(onDelete, id)}>{span}</a>
+//       </td>
+//       {td}
+//     </tr>
+//   );
+// }
 
 function Jumbotron(run, runLots, add, update, clear, swapRows) {
   return (
     <div className="jumbotron">
       <div className="row">
         <div className="col-md-6">
-          <h1>nerv v1.2.8</h1>
+          <h1>nervjs</h1>
         </div>
         <div className="col-md-6">
           <div className="row">
@@ -202,9 +191,11 @@ export class Main extends Component {
     return (
       <div className="container">
         {header}
-        <table className="table table-hover table-striped test-data">
-          {createRows(this.state.store, this.select, this.delete)}
-        </table>
+        <table className="table table-hover table-striped test-data"><tbody>
+          {this.state.store.data.map((item, i) => (
+              <Row key={i} item={item} selected={this.state.store.selected === item.id} select={this.select} remove={this.delete}></Row>
+          ))}
+        </tbody></table>
         <span
           className="preloadicon glyphicon glyphicon-remove"
           aria-hidden="true"

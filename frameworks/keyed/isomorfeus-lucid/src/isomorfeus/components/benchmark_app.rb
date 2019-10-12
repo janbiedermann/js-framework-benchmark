@@ -84,9 +84,10 @@ class BenchmarkApp < LucidApp::Base
       s = app_store.selected
       TABLE(class_name: "table table-hover table-striped test-data") do
         TBODY do
+          i = 0
           @data.each do |item|
             id = item[:id]
-            Row(key: id, item: item, selected: (s == id), remove: @remove_method, icon: @icon)
+            Row(key: i += 1, item: item, selected: (s == id), remove: @remove_method, icon: @icon)
           end
         end
       end

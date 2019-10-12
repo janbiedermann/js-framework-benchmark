@@ -84,9 +84,10 @@ class BenchmarkApp < React::Component::Base
       @icon ||= gre { SPAN(class_name: "glyphicon glyphicon-remove", aria_hidden: "true") }
       TABLE(class_name: "table table-hover table-striped test-data") do
         TBODY do
+          key = 0
           @data.each do |item|
             id = item[:id]
-            Row(key: id, item: item, selected: (s == id), select: @select_method, remove: @remove_method, icon: @icon)
+            Row(key: key += 1, item: item, selected: (s == id), select: @select_method, remove: @remove_method, icon: @icon)
           end
         end
       end

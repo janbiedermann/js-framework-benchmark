@@ -96,7 +96,7 @@ export class AppComponent implements AfterViewChecked {
     }
 
     itemById(index: number, item: Data) {
-        return item.id;
+        return index;
     }
 
     select(item: Data, event: Event) {

@@ -93,7 +93,7 @@ export class Main extends Component{
     }
     render () {
         let rows = this.state.store.data.map((d,i) => {
-        	return <Row key={d.id} data={d} onClick={this.select} onDelete={this.delete} styleClass={d.id === this.state.store.selected ? 'danger':''}></Row>
+        	return <Row key={i} data={d} onClick={this.select} onDelete={this.delete} styleClass={d.id === this.state.store.selected ? 'danger':''}></Row>
         });
         return (<div className="container">
             <div className="jumbotron">

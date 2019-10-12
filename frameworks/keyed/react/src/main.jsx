@@ -143,8 +143,8 @@ class Main extends React.Component {
     return (<div className="container">
       <Jumbotron run={this.run} runLots={this.runLots} add={this.add} update={this.update} clear={this.clear} swapRows={this.swapRows} />
       <table className="table table-hover table-striped test-data"><tbody>
-        {this.state.data.map((item) => (
-          <Row key={item.id} item={item} selected={this.state.selected === item.id} select={this.select} remove={this.remove}></Row>
+        {this.state.data.map((item, i) => (
+          <Row key={i} item={item} selected={this.state.selected === item.id} select={this.select} remove={this.remove}></Row>
         ))}
       </tbody></table>
       <span className="preloadicon glyphicon glyphicon-remove" aria-hidden="true"></span>
