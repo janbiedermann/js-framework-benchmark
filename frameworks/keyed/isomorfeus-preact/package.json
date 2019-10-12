@@ -1,0 +1,32 @@
+{
+  "name": "js-framework-benchmark-isomorfeus-preact",
+  "version": "1.0.0",
+  "description": "Isomorfeus Preact demo",
+  "main": "index.js",
+  "js-framework-benchmark": {
+    "frameworkVersion": "10.0.0"
+  },
+  "scripts": {
+    "build-dev": "echo 'done'",
+    "build-prod": "echo 'done'"
+  },
+  "keywords": [
+    "isomorfeus",
+    "react",
+    "webpack"
+  ],
+  "author": "Jan Biedermann",
+  "license": "MIT",
+  "homepage": "https://github.com/krausest/js-framework-benchmark",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krausest/js-framework-benchmark.git"
+  },
+  "devDependencies": {
+    "webpack": "4.34.0",
+    "webpack-cli": "3.3.4"
+  },
+  "dependencies": {
+    "preact": "10.0.0"
+  }
+}
