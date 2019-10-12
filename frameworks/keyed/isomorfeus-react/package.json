@@ -23,11 +23,7 @@
     "url": "https://github.com/krausest/js-framework-benchmark.git"
   },
   "devDependencies": {
-    "webpack": "4.34.0",
-    "webpack-cli": "3.3.4"
   },
   "dependencies": {
-    "react": "16.10.2",
-    "react-dom": "16.10.2"
   }
 }
