@@ -1,0 +1,29 @@
+{
+  "name": "js-framework-benchmark-isomorfeus-react",
+  "version": "1.0.0",
+  "description": "Isomorfeus React",
+  "main": "index.js",
+  "js-framework-benchmark": {
+    "frameworkVersion": "16.10.2"
+  },
+  "scripts": {
+    "build-dev": "echo 'done'",
+    "build-prod": "echo 'done'"
+  },
+  "keywords": [
+    "isomorfeus",
+    "react",
+    "webpack"
+  ],
+  "author": "Jan Biedermann",
+  "license": "MIT",
+  "homepage": "https://github.com/krausest/js-framework-benchmark",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krausest/js-framework-benchmark.git"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
