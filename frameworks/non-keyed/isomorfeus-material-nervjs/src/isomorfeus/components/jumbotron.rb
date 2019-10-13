@@ -3,7 +3,7 @@ class Jumbotron < LucidMaterial::Component::Base
     DIV(class_name: "jumbotron") do
       DIV(class_name: "row") do
         DIV(class_name: "col-md-6") do
-          H1 "Isomorfeus LucidMaterial Nervjs keyed"
+          H1 "Isomorfeus LucidMaterial Nervjs non-keyed"
         end
         DIV(class_name: "col-md-6") do
           DIV(class_name: "row") do

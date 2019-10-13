@@ -3,7 +3,7 @@ class Jumbotron < LucidComponent::Base
     DIV(class_name: "jumbotron") do
       DIV(class_name: "row") do
         DIV(class_name: "col-md-6") do
-          H1 "Isomorfeus Lucid React keyed"
+          H1 "Isomorfeus Lucid React non-keyed"
         end
         DIV(class_name: "col-md-6") do
           DIV(class_name: "row") do
