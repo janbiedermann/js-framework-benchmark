@@ -15,5 +15,3 @@ global.MuiStyles = MuiStyles;
 import init_app from 'benchmark_loader.rb';
 init_app();
 Opal.load('benchmark_loader');
-
-
