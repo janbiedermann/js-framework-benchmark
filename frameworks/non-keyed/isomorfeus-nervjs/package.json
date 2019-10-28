@@ -4,7 +4,7 @@
   "description": "Isomorfeus Nervjs",
   "main": "index.js",
   "js-framework-benchmark": {
-    "frameworkVersion": "1.4.6"
+    "frameworkVersion": "1.5.1"
   },
   "scripts": {
     "build-dev": "echo 'done'",
