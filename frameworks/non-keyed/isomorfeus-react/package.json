@@ -4,7 +4,7 @@
   "description": "Isomorfeus React",
   "main": "index.js",
   "js-framework-benchmark": {
-    "frameworkVersion": "16.10.2"
+    "frameworkVersion": "16.11.0"
   },
   "scripts": {
     "build-dev": "echo 'done'",

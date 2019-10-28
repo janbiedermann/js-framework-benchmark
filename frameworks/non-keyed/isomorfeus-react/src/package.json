@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "opal-webpack-loader": "^0.9.6",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4"

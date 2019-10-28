@@ -4,7 +4,7 @@
   "description": "Isomorfeus Preact",
   "main": "index.js",
   "js-framework-benchmark": {
-    "frameworkVersion": "10.0.0"
+    "frameworkVersion": "10.0.1"
   },
   "scripts": {
     "build-dev": "echo 'done'",

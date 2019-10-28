@@ -6,5 +6,6 @@ gem 'opal-activesupport', '~> 0.3.3'
 gem 'opal-webpack-loader', '>= 0.9.6'
 
 gem 'opal-autoloader', '~> 0.1.0'
-gem 'isomorfeus-redux', '~> 4.0.14'
+gem 'isomorfeus-redux', '~> 4.0.16'
+# gem 'isomorfeus-react', '~> 16.10.12'
 gem 'isomorfeus-react', path: '../../../../../isomorfeus-react'
