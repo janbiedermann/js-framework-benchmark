@@ -4,7 +4,7 @@
   "description": "Isomorfeus Lucid React demo",
   "main": "index.js",
   "js-framework-benchmark": {
-    "frameworkVersion": "16.10.4"
+    "frameworkVersion": "16.11.0"
   },
   "scripts": {
     "build-dev": "echo 'done'",
