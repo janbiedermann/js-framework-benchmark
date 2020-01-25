@@ -3,7 +3,7 @@ const OwlResolver = require('opal-webpack-loader/resolver'); // to resolve ruby 
 
 const common_config = {
     target: 'web',
-    context: path.resolve(__dirname, '../isomorfeus'),
+    context: path.resolve(__dirname, '../app'),
     mode: "development",
     optimization: {
         minimize: false // dont minimize for debugging
@@ -48,7 +48,7 @@ const common_config = {
 
 const bench_config = {
     entry: {
-        "benchmark": [path.resolve(__dirname, '../isomorfeus/imports/benchmark.js')],
+        "benchmark": [path.resolve(__dirname, '../app/imports/benchmark.js')],
     },
     output: {
         filename: '[name].js',

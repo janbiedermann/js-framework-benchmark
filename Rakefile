@@ -24,6 +24,7 @@ task :update_gems_and_npms_and_build do
           system('yarn add react')
           system('yarn add react-dom')
         end
+        system('yarn add opal-webpack-loader')
         system('bundle update')
         system('yarn run production_build')
       end
@@ -36,7 +37,7 @@ task :run_benches_and_build_results_table do
   puts "bench server must be already running"
   pwd = Dir.pwd
   Dir.chdir('webdriver-ts')
-  system('npm run bench -- --chromeBinary /Applications/Chromium.app/Contents/MacOS/Chromium')
+  system('npm run bench -- --chromeBinary /Applications/Chrome.app/Contents/MacOS/Chrome')
   system('npm run results')
   Dir.chdir(pwd)
 end

@@ -7,8 +7,8 @@
     "debug_build": "parallel-webpack --config=webpack/debug.js --max-tries=1 --no-stats"
   },
   "dependencies": {
-    "opal-webpack-loader": "^0.9.6",
-    "preact": "^10.0.2",
+    "opal-webpack-loader": "^0.9.10",
+    "preact": "^10.2.1",
     "preact-compat": "^3.19.0",
     "redux": "^4.0.4"
   },
